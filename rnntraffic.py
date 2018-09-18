@@ -55,6 +55,8 @@ x=[ir[0] for ir in  z]
 y=[irr[1] for irr in  z]
 x1=[irrr[2] for irrr in  z]
 x2=[irrrr[3] for irrrr in  z]
+x3=[dd[4] for dd  in  z]
+x4=[ddd[5] for ddd  in  z]
 print(x)
 print("_____________________")
 print(y)
@@ -113,6 +115,8 @@ def predict(self, x):
  
 RNNNumpy.predict = predict
 
+# from numpy calculation
+veh_predict=67
 
 #  creating  covar with loss function 
 # covariance between x and y 
@@ -177,14 +181,16 @@ def simple_linear_regression(train,test):
 # calling
 rmse=evaluate_algorithm(dataset,simple_linear_regression)
 print('avearge on behalf first vehicle that is four wheelers: %.3f'%(rmse))
-print('average fourwheelers in per hour :',66)
+print('average fourwheelers in per hour :',veh_predict)
 print('similar for all others vehicle')
 
 
-plt.xlabel('fourwheelersRNN ')
+plt.xlabel('RNN all vehicle')
 plt.ylabel('mean valus using RNN')
 plt.scatter(x1,x2)
 plt.scatter(x,y)
+plt.scatter(x3,x4)
+plt.scatter(x2,x3)
 plt.show()
 
 
